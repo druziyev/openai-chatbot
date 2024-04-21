@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(0, 17, 37);
+    color: #fafafa;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.header{
+    height: 70px;
+    width: 100%;
+}
+.header img{
+    padding-left: 100px;
+    max-width: 64px;
+}
+
+.main{
+    padding-top: 50px;
+}
+
+
+.main__welcome{
+    padding-left: 100px;
+    padding-right: 15px;
+    margin-bottom: 50px;
+}
+.main__welcome h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.main_description{
+    font-size: 1.5em;
+}
+.main_description span{
+    color: #39FF14;
+}
+
+
+
+.main__content{
+    margin: 0 auto;
+    max-width: 1500px;
+    background-color: rgb(0, 28, 59);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 50px 100px;
+}
+
+.main__content p{
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+
+.main_content form{
+    margin-top: 50px;
+    width: 100%;
+}
+
+
+.main__content form .input_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+.main__content form input{
+    width: 95%;
+    padding: 10px 15px;
+    color: #fafafa;
+    background-color: rgb(0, 17, 37);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05em;
+    font-family: "Roboto", sans-serif;
+    margin-right: 10px;
+}
+.main__content form button{
+    border-radius: 10px;
+    border: none;
+    background-color: #fafafa;
+    color: rgb(0, 17, 37);
+    padding: 10px 30px;
+}

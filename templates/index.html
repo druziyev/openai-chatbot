@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat Bot</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+	</head>
+	
+	
+	<body>
+        
+        <!-- /.Header -->
+        <header class="header">
+            <img src="{{ url_for('static', filename='bot.png')}}" alt="chat bot png">
+        </header>
+        
+        <!-- /.Main -->
+        <main class="main">
+            <div class="main__welcome">
+                <h1>Welcome!</h1>
+                <p class="main_description">I am <span>Daniyar</span>, helping people with their biggest concerns &#128513;</p>
+            </div>
+
+            <div class="main__content">
+                {% if result %}
+                    {% for text in result.response %}
+                    <p>{{ text }}</p>
+                    {% endfor %}
+
+                    <form action="{{ url_for("index")}}" method="post">
+                        <div class="input_wrapper">
+                            <input autocomplete="off" type="text" id="message" name="message" placeholder="Ask me something else..">
+                            <button type="submit">GET</button>
+                        </div>
+                    </form>
+                {% else %}
+                    <form action="{{ url_for("index")}}" method="post">
+                        <div class="input_wrapper">
+                            <input autocomplete="off" type="text" id="message" name="message" placeholder="Ask me something else..">
+                            <button type="submit">GET</button>
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
+        </main>
+
+    </body>
+</html>
